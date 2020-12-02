@@ -16,21 +16,21 @@
     <p class="p-style" id="second-paragraph">Segundo parágrafo!</p>
 
     <script>
-        const paragraph = document.getElementById("paragraph");
+        const paragraph = document.querySelector("#paragraph");
         paragraph.style.color = "red";
-        const title = document.getElementById('page-title');
+        const title = document.querySelector('#page-title');
         title.innerText = 'filme favorito'
 
-        const secondParagraph = document.getElementById('second-paragraph')
+        const secondParagraph = document.querySelector('#second-paragraph')
         secondParagraph.style.backgroundColor = '#ddd'
 
-        const subTitle = document.getElementById('subtitle')
+        const subTitle = document.querySelector('#subtitle')
         subTitle.style.border = 'solid 1px #ddd'
 
-        const paragraphs = document.getElementsByClassName('p-style')
+        const paragraphs = document.querySelectorAll('.p-style')
         paragraphs[0].style.backgroundColor = '#dfd'
 
-        const subTitleByTag = document.getElementsByTagName('h4')[0]
+        const subTitleByTag = document.querySelectorAll('h4')[0]
         subTitleByTag.style.textDecoration = 'underline'
     </script>
 </body>
