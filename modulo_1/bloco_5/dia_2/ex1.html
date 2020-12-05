@@ -31,7 +31,8 @@
     primeiroFilhoDoFilho.innerText = 'texto pedido na questão 3'
     // 4 - Acesse o primeiroFilho a partir de pai .
     const pai = document.getElementById('pai')
-    console.log(pai.firstElementChild)
+    const primeiroFilho = pai.firstElementChild
+    console.log(primeiroFilho)
     // 5 - Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
     console.log(elementoOndeVoceEsta.previousElementSibling)
     // 6 - Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
@@ -57,7 +58,20 @@
     primeiroFilhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho)
     // A partir desse filho criado, acesse terceiroFilho .
     console.log(filhoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling)
-    
+    // Terceira parte
+    // Remova todos os elementos da página, menos pai , elementoOndeVoceEsta e primeiroFilhoDoFilho .
+    pai.removeChild(primeiroFilho)
+    pai.removeChild(pai.lastElementChild)
+    pai.removeChild(pai.lastElementChild)
+    pai.removeChild(pai.lastElementChild)
+    pai.removeChild(pai.lastChild)
+    pai.removeChild(pai.lastChild)
+    pai.removeChild(pai.lastChild)
+    elementoOndeVoceEsta.removeChild(elementoOndeVoceEsta.lastElementChild)
+    elementoOndeVoceEsta.removeChild(elementoOndeVoceEsta.lastElementChild)
+    primeiroFilhoDoFilho.removeChild(primeiroFilhoDoFilho.firstElementChild)
+    document.body.appendChild(pai.cloneNode(true))
+    pai.parentElement.remove()
     </script>
 </body>
 
