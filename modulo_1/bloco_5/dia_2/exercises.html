@@ -110,11 +110,17 @@
     }
     rightContent.appendChild(listUl)
     // 9 - Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
-    const h3 = document.createElement('h3')
-    h3.innerText = 'h3'
-    divMainContent.appendChild(h3.cloneNode(true))
-    divMainContent.appendChild(h3.cloneNode(true))
-    divMainContent.appendChild(h3.cloneNode(true))
+    const listH3 = [
+        document.createElement('h3'),
+        document.createElement('h3'),
+        document.createElement('h3'),
+    ]
+    listH3[0].innerText = 'h3'
+    listH3[1].innerText = 'h3'
+    listH3[2].innerText = 'h3'
+    divMainContent.appendChild(listH3[0].cloneNode(true))
+    divMainContent.appendChild(listH3[1].cloneNode(true))
+    divMainContent.appendChild(listH3[2].cloneNode(true))
 
     // Parte 2
     // Adicione a classe title na tag h1 criada;
